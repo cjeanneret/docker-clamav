@@ -1,0 +1,4 @@
+#!/bin/bash
+/usr/bin/freshclam
+/opt/clamav-unofficial-sigs/clamav-unofficial-sigs.sh
+/usr/bin/clamscan -r --detect-pua=yes --detect-structured=yes /virus
