@@ -1,4 +1,4 @@
 #!/bin/sh
-docker images | grep -q clamav:latest || docker build -t clamav:latest .
+docker images | grep -q clamav || docker build -t clamav:latest .
 
 docker run --rm -ti -v $(pwd)/clamavdb:/var/lib/clamav/ -v $(pwd)/virus:/virus clamav:latest
