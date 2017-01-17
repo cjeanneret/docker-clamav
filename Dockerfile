@@ -2,7 +2,7 @@ FROM debian:latest
 
 RUN apt update && apt upgrade -y --force-yes
 
-RUN apt install -y curl wget git clamav
+RUN apt install -y curl wget git clamav dnsutils
 RUN git clone https://github.com/extremeshok/clamav-unofficial-sigs.git /opt/clamav-unofficial-sigs
 RUN chmod 0755 /opt/clamav-unofficial-sigs/clamav-unofficial-sigs.sh
 RUN cp -r /opt/clamav-unofficial-sigs/config /etc/clamav-unofficial-sigs/
